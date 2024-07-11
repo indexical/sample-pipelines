@@ -1,0 +1,16 @@
+{
+    "name": "crawl_site",
+    "steps": [
+        {
+            "action": "crawl",
+            "limit": 10
+        },
+        {
+            "goal": "extract the following information",
+            "action": "extract",
+            "schema": {
+                "content": "$mainContent"
+            }
+        }
+    ]
+}

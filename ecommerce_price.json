@@ -1,0 +1,27 @@
+{
+    "name": "ecommerce_price",
+    "steps": [
+        {
+            "action": "extract-many",
+            "goal": "extract the listed information about each product listing",
+            "schema": {
+                "product_name": {
+                    "type": "string",
+                    "description": "the name of the product"
+                },
+                "product_price": {
+                    "type": "string",
+                    "description": "the price (discounted if available) of the product"
+                },
+                "image_link": {
+                    "type": "string",
+                    "description": "the link to the product image, if available"
+                },
+                "product_listing_link": {
+                    "type": "string",
+                    "descripiton": "the link to the product listing details page"
+                }
+            }
+        }
+    ]
+}

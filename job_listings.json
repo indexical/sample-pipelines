@@ -1,0 +1,51 @@
+{
+    "name": "job_listings",
+    "steps": [
+        {
+            "action": "navigate",
+            "goal": "Find a page listing open jobs/positions at the company. Make sure at least 2 job postings are listed on the page",
+            "try": [
+                "/careers",
+                "/jobs",
+                "/about"
+            ]
+        },
+        {
+            "action": "navigate-many",
+            "goal": "Find the dedicated pages for each individual job listings, with all the details.",
+            "retries": 2,
+            "validation": {
+                "size": {
+                    "min": 2
+                }
+            }
+        },
+        {
+            "action": "extract",
+            "goal": "Structure the information about the current job listing.",
+            "schema": {
+                "overview": "$mainContent",
+                "company": {
+                    "description": "the company posting the role",
+                    "type": "string"
+                },
+                "remote": {
+                    "description": "Whether this job is fully remote or it requires on site",
+                    "type": "boolean"
+                },
+                "salary": {
+                    "description": "the salary range of the role, if described",
+                    "type": "string"
+                },
+                "summary": {
+                    "description": "A small summary of the job. Limit to 1 - 2 sentences",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The job title",
+                    "type": "string"
+                }
+            }
+        }
+    ]
+}

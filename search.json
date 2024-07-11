@@ -1,0 +1,18 @@
+{
+    "name": "search",
+    "steps": [
+        {
+            "limit": 1,
+            "action": "search",
+            "query": "Anthropic's latest round of funding",
+            "filter": "Only show news articles / posts from the company"
+        },
+        {
+            "goal": "extract the following information",
+            "action": "extract",
+            "schema": {
+                "content": "$mainContent"
+            }
+        }
+    ]
+}
