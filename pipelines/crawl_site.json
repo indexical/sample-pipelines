@@ -2,7 +2,7 @@
     "name": "crawl_site",
     "steps": [
         {
-            "action": "crawl",
+            "action": "crawl", 
             "limit": 10
         },
         {

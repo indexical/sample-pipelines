@@ -3,12 +3,7 @@
     "steps": [
         {
             "action": "navigate",
-            "goal": "Find a page listing open jobs/positions at the company. Make sure at least 2 job postings are listed on the page",
-            "try": [
-                "/careers",
-                "/jobs",
-                "/about"
-            ]
+            "goal": "Find a page listing open jobs/positions at the company. Make sure at least 2 job postings are listed on the page"
         },
         {
             "action": "navigate-many",
@@ -24,7 +19,7 @@
             "action": "extract",
             "goal": "Structure the information about the current job listing.",
             "schema": {
-                "overview": "$mainContent",
+                "job_description": "$mainContent",
                 "company": {
                     "description": "the company posting the role",
                     "type": "string"
