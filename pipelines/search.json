@@ -6,16 +6,6 @@
             "limit": 1
         },
         {
-            "action": "navigate",
-            "goal": "Find the page that answers the following question: $data.input",
-            "hops": {
-                "max": 3
-            },
-            "onFailure": {
-                "behavior": "continue"
-            }
-        },
-        {
             "action": "extract",
             "goal": "extract the following information",
             "schema": {
